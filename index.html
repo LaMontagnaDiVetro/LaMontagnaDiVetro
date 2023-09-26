@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sito Web con due bottoni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagina con Bottoni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<button onclick="window.location.href='URL_DEL_PRIMO_SITO'">Sito 1</button>
-<button onclick="window.location.href='URL_DEL_SECONDO_SITO'">Sito 2</button>
+    <h1>Benvenuto alla Pagina dei Bottoni</h1>
+
+    <div class="button-container">
+        <!-- Bottone per il sito web -->
+        <button class="button" onclick="window.location.href='URL_DEL_SITO_WEB'">Vai al Sito</button>
+
+        <!-- Bottone per il PowerPoint (apre in una nuova finestra) -->
+        <button class="button" onclick="window.open('URL_DEL_POWERPOINT')">Apri PowerPoint</button>
+
+        <!-- Bottone per scaricare il PowerPoint -->
+        <a href="URL_DEL_POWERPOINT_DA_SCARICARE" download>
+            <button class="button">Scarica PowerPoint</button>
+        </a>
+
+        <!-- Bottone per aprire il PDF (apre in una nuova finestra) -->
+        <button class="button" onclick="window.open('URL_DEL_PDF')">Apri PDF</button>
+
+        <!-- Bottone per scaricare il PDF -->
+        <a href="URL_DEL_PDF_DA_SCARICARE" download>
+            <button class="button">Scarica PDF</button>
+        </a>
+    </div>
 </body>
 </html>
+
